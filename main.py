@@ -28,9 +28,7 @@ def stack_valid(str):
     end = {1: ')', 2: '}', 3: ']'}
     stack_1 = Stack(str)
     if stack_1.size() % 2 == 0:
-        stack_list = []
-        for i in range(stack_1.size()):
-            stack_list.append(stack_1.pop())
+        stack_list = list(str)
         index = 1
         for a in stack_list[index-1:]:
             for key, values in end.items():
